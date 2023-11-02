@@ -4,7 +4,7 @@ Long Description about project. This project do that. This project is awesome...
 ## Team members
 1. [Alan Joseph](https://github.com/notalanjoseph)
 2. [Adwaith Shinod](https://github.com/ADWAITH-553)
-3. George Emmanuel Thomas
+3. [George Emmanuel Thomas](https://github.com/GeorgeET15)
 ## Team Id
 Team id here
 ## Link to product walkthrough
