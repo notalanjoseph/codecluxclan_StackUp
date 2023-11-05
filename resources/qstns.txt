@@ -1,0 +1,50 @@
+Which is the largest continent in the world?
+(A) Asia
+(B) Africa
+(C) North America
+(D) South America
+Which is the highest mountain in the world?
+(A) Mount Everest
+(B) K2
+(C) Kanchenjunga
+(D) Nanga Parbat
+Which is the largest ocean in the world?
+(A) Pacific Ocean
+(B) Atlantic Ocean
+(C) Indian Ocean
+(D) Arctic Ocean
+Which is the national animal of India?
+(A) Tiger
+(B) Elephant
+(C) Peacock
+(D) Lion
+Which is the capital of India?
+(A) New Delhi
+(B) Mumbai
+(C) Kolkata
+(D) Chennai
+Who is the current President of India?
+(A) Droupadi Murmu
+(B) Narendra Modi
+(C) Amit Shah
+(D) Jagdeep Dhankhar
+Who is the current Prime Minister of India?
+(A) Droupadi Murmu
+(B) Narendra Modi
+(C) Amit Shah
+(D) Jagdeep Dhankhar
+Which is the currency of India?
+(A) Rupee
+(B) Dollar
+(C) Euro
+(D) Pound
+Which is the national language of India?
+(A) Hindi
+(B) English
+(C) Sanskrit
+(D) Urdu
+What is the total number of states in India?
+(A) 28
+(B) 29
+(C) 30
+(D) 31
