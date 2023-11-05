@@ -1,5 +1,6 @@
 import React from 'react'
 import  { useState } from 'react'
+import { Link } from 'react-router-dom';
 export default function Login() {
   const[values,setValues]=useState({
     username:"",
@@ -24,6 +25,9 @@ export default function Login() {
       <input placeholder="password" type="password" value={values.password} onChange={e=>setValues({...values,password:e.target.value})}/>
       <br />
       <button>Submit</button>
+      <br />
+      <span>dont have an account?</span>
+      <Link to="/register">Register</Link>
     </form>
     </div>
   )
