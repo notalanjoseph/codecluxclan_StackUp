@@ -1,16 +1,26 @@
 import React from 'react'
 import  { useState } from 'react'
-import { Link } from 'react-router-dom';
+import axios from 'axios'
+import { Link, useNavigate } from 'react-router-dom';
+import {useCookies} from 'react-cookie'
 export default function Login() {
   const[values,setValues]=useState({
     username:"",
-    email:"",
     password:""
   })
-  const handleSubmit=(e)=>{
+ const [_,setCookies]=useCookies(["access_token"])
+  const navigate=useNavigate();
+  const handleSubmit=async (e)=>{
     e.preventDefault();
-    console.log(values.username)
-    console.log(values.password)
+    try{
+      const res=await axios.post("/login ",{username:values.username,password:values.password})
+      setCookies("access_token",res.data.access_token);
+      window.localStorage.setItem("userID",res.data.userID)
+      navigate('/');
+    }
+    catch(err){
+      console.error(err);
+    }
   }
   return (
     <div className='login'>
