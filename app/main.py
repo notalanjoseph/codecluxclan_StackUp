@@ -1,25 +1,16 @@
-from multiprocessing import synchronize
-from operator import ne
-from typing import Optional, List
-from typing_extensions import deprecated
-from fastapi import FastAPI, Body, HTTPException, Response, status, Depends
-import psycopg2
-from random import randrange
+from fastapi import FastAPI
 import psycopg2
 from psycopg2.extras import RealDictCursor
 import time
-from sqlalchemy.orm import Session
-from . import models, schemas, utils
-from .database import engine, get_db
+from . import models
+from .database import engine
 from .routers import user, auth
-
 
 #uvicorn app.main:app --reload
 
-models.Base.metadata.create_all(bind=engine)
+models.Base.metadata.create_all(bind=engine)#create the database tables defined in your SQLAlchemy models if they don't already exist
 
 app = FastAPI()
-
 
 # db connection
 while True:
@@ -41,8 +32,3 @@ app.include_router(auth.router)
 @app.get("/")
 def root():
     return {"message":"hello world"}
-
-
-
-
-
