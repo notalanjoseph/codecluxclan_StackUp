@@ -2,6 +2,7 @@ from fastapi import FastAPI, Body, HTTPException, Response, status, Depends, API
 from sqlalchemy.orm import Session
 from .. import models, schemas, utils
 from ..database import engine, get_db
+from fastapi.security.oauth2 import OAuth2PasswordRequestForm
 
 router = APIRouter(
     prefix="/users",
@@ -9,13 +10,14 @@ router = APIRouter(
 )
 
 @router.post("/", status_code=status.HTTP_201_CREATED, response_model=schemas.UserOut)
-def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
+#def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
+def register(user: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
     
     #hash the password
     hashed_password = utils.hash(user.password)
     user.password = hashed_password
-
-    new_user = models.User(**dict(user)) 
+    #new_user = models.User(**dict(user))
+    new_user = models.User(**{"email":user.username, "password":user.password})
     db.add(new_user)
     db.commit()
     db.refresh(new_user)

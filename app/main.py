@@ -11,7 +11,7 @@ import time
 from sqlalchemy.orm import Session
 from . import models, schemas, utils
 from .database import engine, get_db
-from .routers import post, user, auth
+from .routers import user, auth
 
 
 #uvicorn app.main:app --reload
